@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue JS - Simple Calculator App</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .True {
+            background-color: cadetblue;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,6 +30,7 @@
         </section>
         <hr>
         <div>
+            {{ message2 }}
             <ul>
                 <li v-for="i in List" :class="{True: i.isTrue}" v-on:click="toogleTrue(i)">
                     <p> {{i.nama}} - {{i.task}} </p>

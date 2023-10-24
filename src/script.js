@@ -7,36 +7,37 @@ createApp({
             angka1: 0, 
             angka2: 0, 
             res: 0, 
+            message2: "Click to mark the task!", 
             List: [
                 {
                     nama: "Bima",
                     task: "ETS P-WEB", 
-                    isTrue: true
+                    isTrue: false
                 }, 
                 {
                     nama: "Jeri",
                     task: "ETS Teori Graf", 
-                    isTrue: true
+                    isTrue: false
                 }, 
                 {
                     nama: "Iftala",
                     task: "Web Development", 
-                    isTrue: true
+                    isTrue: false
                 }, 
                 {
                     nama: "Aditya",
                     task: "ETS Matdis", 
-                    isTrue: true
+                    isTrue: false
                 }, 
                 {
                     nama: "Kaisar",
                     task: "Codeforces Thing", 
-                    isTrue: true
+                    isTrue: false
                 }, 
                 {
                     nama: "Moris", 
                     task: "ETS PBO", 
-                    isTrue: true
+                    isTrue: false
                 }
             ],
         }
@@ -54,5 +55,8 @@ createApp({
         bagi(){
             this.res = this.angka1 / this.angka2
         },
+        toogleTrue(e){
+            e.isTrue = !e.isTrue
+        }
     }
 }).mount('#app')
