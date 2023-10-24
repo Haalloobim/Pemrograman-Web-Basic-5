@@ -23,6 +23,14 @@
             <button v-on:click="bagi">/</button>
             <h2> {{ res }}</h2>
         </section>
+        <hr>
+        <div>
+            <ul>
+                <li v-for="i in List" :class="{True: i.isTrue}" v-on:click="toogleTrue(i)">
+                    <p> {{i.nama}} - {{i.task}} </p>
+                </li>
+            </ul>   
+        </div>
 
     </div>
 
