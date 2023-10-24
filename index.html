@@ -11,6 +11,19 @@
 <body>
     <div id="app">
         {{ message }}
+        <br><br>
+        <section>
+            <input placeholder="angka1" type="number" v-model="angka1">
+            <br>
+            <input placeholder="angka1"  type="number" v-model="angka2">
+            <br>
+            <button v-on:click="plus">+</button>
+            <button v-on:click="min">-</button>
+            <button v-on:click="kali">*</button>
+            <button v-on:click="bagi">/</button>
+            <h2> {{ res }}</h2>
+        </section>
+
     </div>
 
     <script src="./src/script.js">
