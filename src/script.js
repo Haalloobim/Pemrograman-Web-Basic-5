@@ -7,11 +7,18 @@ createApp({
             angka1: 0, 
             angka2: 0, 
             res: 0, 
-            message2: "Click to mark the task!", 
+            message2: "Click to mark the task!",
+            searchName: '', 
+            searchTask: '',  
             List: [
                 {
                     nama: "Bima",
                     task: "ETS P-WEB", 
+                    isTrue: false
+                }, 
+                {
+                    nama: "Abdi",
+                    task: "ETS Kalkulus", 
                     isTrue: false
                 }, 
                 {
@@ -57,6 +64,32 @@ createApp({
         },
         toogleTrue(e){
             e.isTrue = !e.isTrue
-        }
+        }, 
+        ByNameSearch(){
+            let flag = 1
+            for (let i of this.List){
+                if(i.nama === this.searchName){
+                    this.toogleTrue(i)
+                    flag = 0
+                    break
+                }
+            }
+            if(flag){
+                alert("Nama tidak ada")
+            }
+        },
+        ByTaskSearch(){
+            let flag = 1
+            for (let i of this.List){
+                if(i.task === this.searchTask){
+                    this.toogleTrue(i)
+                    flag = 0
+                    break
+                }
+            }
+            if(flag){
+                alert("Task tidak ada")
+            }
+        },
     }
 }).mount('#app')

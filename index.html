@@ -35,7 +35,12 @@
                 <li v-for="i in List" :class="{True: i.isTrue}" v-on:click="toogleTrue(i)">
                     <p> {{i.nama}} - {{i.task}} </p>
                 </li>
-            </ul>   
+            </ul>  
+            <input type="text" placeholder="byName" v-model="searchName"> 
+            <button v-on:click="ByNameSearch">Search By Name</button>
+            <br>
+            <input type="text" placeholder="byTask" v-model="searchTask"> 
+            <button v-on:click="ByTaskSearch">Search By Task</button>
         </div>
 
     </div>
